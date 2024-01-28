@@ -26,6 +26,8 @@ const addPost = function(){
         .then(response => response.json())
         .then(data => createElem(data))
         .catch(error => console.error('Ошибка:', error));
+        header.value = '';
+        text.value = ''; 
 }
 
 button.addEventListener('click', addPost);

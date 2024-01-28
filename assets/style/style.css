@@ -1,0 +1,30 @@
+body{
+    background-color: rgba(165, 42, 42, 0.279);
+}
+.form_section{
+    margin: 4vw;
+}
+h1{
+    color: brown;
+}
+h2{
+    color:rgb(226, 86, 31) ;
+}
+div{
+    margin: 4vw;
+    max-width: 40vw;
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 0, 0, 0.181);
+    background-color: rgba(173, 38, 38, 0.214);
+    color:firebrick;
+}
+input[type="text"]:focus{
+    outline: none;
+    background-color: rgba(170, 82, 82, 0.434);
+}
+.button:hover{
+    background-color: rgba(173, 38, 38, 0.516);
+}
