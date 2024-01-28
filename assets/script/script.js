@@ -1,7 +1,7 @@
 "use strict"
 const container = document.querySelector('.container');
-const header = document.querySelector('.input_header').value;
-const text = document.querySelector('.input_text').value;
+const header = document.querySelector('.input_header');
+const text = document.querySelector('.input_text');
 const button = document.querySelector('.button');
 
 const createElem = function(post){
@@ -15,8 +15,8 @@ const addPost = function(){
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
-            title: `${header}`,
-            body: `${text}`,
+            title: `${header.value}`,
+            body: `${text.value}`,
             userId: 1
         }),
         headers: {
@@ -27,3 +27,5 @@ const addPost = function(){
         .then(data => createElem(data))
         .catch(error => console.error('Ошибка:', error));
 }
+
+button.addEventListener('click', addPost);
